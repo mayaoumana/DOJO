@@ -4,6 +4,14 @@ const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/li
 
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'custom-title',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+  },
+
   e2e: {
     chromeWebSecurity: false,
     setupNodeEvents(on, config) {
